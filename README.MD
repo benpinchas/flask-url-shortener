@@ -1,3 +1,3 @@
-pipenv install
-pipenv shell
+pipenv install,
+pipenv shell,
 exit
