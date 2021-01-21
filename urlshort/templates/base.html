@@ -1,0 +1,38 @@
+<head>
+   <style>
+      body {
+         margin: 0;
+      }
+
+      header.website-header {
+         background-color: gainsboro;
+      }
+
+      header.website-header > h1 {
+         margin: 0 2rem;
+      }
+
+      div.main-block {
+         border: 1px solid black;
+         border-left: 0;
+         border-right: 0;
+         padding: 0 2rem;
+      }
+   </style>
+
+   <title>{% block title %} {% endblock %}</title>
+</head>
+
+<header class="website-header">
+   <h1>URL Shortener ⚡</h1>
+</header>
+
+<div class="main-block">
+   {% for message in get_flashed_messages() %}
+      <h2>(!) {{ message }} </h2>
+   {% endfor %}
+
+   {% block main %}
+      <p>will be override</p>
+   {% endblock %}
+</div>

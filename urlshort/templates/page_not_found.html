@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} Page Not Found {% endblock %}
+
+{% block main %}
+   <h1>Page not found</h1>
+
+   <p>We could not found what you are looking for. come visit our homepage :) </p>
+
+   <p>
+      <a href="{{ url_for('urlshort.home') }}">Home</a>
+   </p>
+{% endblock %}
